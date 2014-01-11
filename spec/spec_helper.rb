@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__), '../app', 'base.rb')
+require File.join(File.dirname(__FILE__), '../app', 'wunderground_client.rb')
 
 require 'sinatra'
 require 'rack/test'
