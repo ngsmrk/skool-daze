@@ -1,7 +1,19 @@
 %html
     %head
+        %title
+            Skool Daze
         %link{:type => "text/css", :rel => "stylesheet", :href => "/css/bootstrap.min.css"}
-    %body
-        = yield
         
-        %script{:type => "text/javascript", src:"/js/bootstrap.min.js"}        
+    %body
+        #wrap
+            .navbar.navbar-default
+                .container
+                    .navbar-header
+                        %a.navbar-brand{:href => "/"} Skool Daze
+            .container
+                .row
+                    = yield
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        %script{:type => "text/javascript", src:"https://code.jquery.com/jquery.js"}
+        %script{:type => "text/javascript", src:"/js/bootstrap.min.js"}

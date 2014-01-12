@@ -1,5 +1,11 @@
-%h1
-  Welcome
-
-%p
-  Hello, World!
+.panel.panel-default
+  .panel-heading
+    Enter your details
+  .panel-body
+    %form.form-inline{:role => 'form'}
+      .form-group
+        %input.form_control{:type => 'text', :placeholder => 'Enter start date'}
+        %input.form_control{:type => 'text', :placeholder => 'Enter end date'}
+        %input.form_control{:type => 'text', :placeholder => 'Enter destination'}
+        %button.btn.btn-default{:type => "submit"}
+          Search
