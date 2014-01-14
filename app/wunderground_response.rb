@@ -11,6 +11,10 @@ class WundergroundResponse
     response_hash['error']['description']
   end
   
+  def title
+    @hash['trip']['title']
+  end
+  
   private
   
   def response_hash

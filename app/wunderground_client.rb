@@ -1,3 +1,5 @@
+require_relative 'wunderground_response'
+
 class WundergroundClient
   
   include HTTParty
@@ -18,6 +20,6 @@ class WundergroundClient
   def get_data(url)
     full_url = "#{@base_url}/#{api_key}/#{url}"
     puts full_url
-    self.class.get(full_url).parsed_response
+    WundergroundResponse.new(self.class.get(full_url).parsed_response)
   end
 end

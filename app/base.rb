@@ -11,7 +11,7 @@ end
 post '/' do
   client = WundergroundClient.new('463b65ffdd4cff1c')
   response = client.planner(params['start_date'], params['end_date'], params['country'], params['town_city'])
-  @title = response['trip']['title']
+  @title = response.title
   puts @title
 
   haml :index  
