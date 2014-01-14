@@ -1,3 +1,4 @@
+require 'httparty'
 require_relative 'wunderground_response'
 
 class WundergroundClient

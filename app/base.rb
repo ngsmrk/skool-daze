@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'haml'
-require 'httparty'
 
 require_relative 'wunderground_client'
 
