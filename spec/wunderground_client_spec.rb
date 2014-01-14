@@ -17,12 +17,12 @@ describe WundergroundClient do
     end    
   end
   
-  context '#holiday_planner_info' do
+  context '#planner' do
     
     it 'uses the correct URL' do
       
       @client.should_receive(:get_data).with('planner_07010731/q/France/Paris.json')
-      @client.holiday_planner_info('0701', '0731', 'France', 'Paris') # 1 Sep -> 31 Sep
+      @client.planner('0701', '0731', 'France', 'Paris') # 1 Sep -> 31 Sep
     end
     
   end

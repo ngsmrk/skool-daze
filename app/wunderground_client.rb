@@ -9,8 +9,7 @@ class WundergroundClient
     @api_key = api_key
   end
   
-  def holiday_planner_info(start_date, end_date, country, city)
-    # http://api.wunderground.com/api/463b65ffdd4cff1c/planner_07010731/q/CA/San_Francisco.json    
+  def planner(start_date, end_date, country, city)  
     get_data("planner_#{start_date}#{end_date}/q/#{country}/#{city}.json")
   end
 
