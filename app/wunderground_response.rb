@@ -1,3 +1,4 @@
+require_relative 'wunderground_chance_data'
 require_relative 'wunderground_range'
 
 class WundergroundResponse
@@ -26,15 +27,23 @@ class WundergroundResponse
   end
   
   def rain_levels
-    WundergroundRange.new(trip_hash['precip'])
+    get_range 'precip'
   end
   
+  def temp_low
+    get_range 'temp_low'
+  end
+
   def temp_high
-    trip_hash['temp_high']
+    get_range 'temp_high'
   end
-  
+
   private
-  
+
+  def get_range(key)
+    WundergroundRange.new(trip_hash[key])
+  end
+
   def response_hash
     @hash['response']
   end
