@@ -12,5 +12,5 @@ post '/' do
   response = client.planner(params['start_date'], params['end_date'], params['country'], params['town_city'])
   @title = response.title
 
-  haml :index  
+  haml :results  
 end
