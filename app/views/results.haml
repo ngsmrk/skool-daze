@@ -32,13 +32,11 @@
       %td= @client_response.rain_levels.max_cm
       %td= @client_response.rain_levels.avg_cm
 
-  %table.table.table-hover.table-bordered
-    %tr
-      %th Chance of
-      %th Percentage
-    %tr
-      %td= @client_response.chance_of('tempoverfreezing').description
-      %td= @client_response.chance_of('tempoverfreezing').percentage
-    %tr
-      %td= @client_response.chance_of('tempoversixty').description
-      %td= @client_response.chance_of('tempoversixty').percentage
+    %table.table.table-hover.table-bordered
+      %tr
+        %th Condition
+        %th Percentage      
+        - @client_response.chance_of_keys.each do | key |       
+          %tr
+            %td= @client_response.chance_of(key).name
+            %td= @client_response.chance_of(key).percentage

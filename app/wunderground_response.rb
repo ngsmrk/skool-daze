@@ -38,6 +38,10 @@ class WundergroundResponse
     get_range 'temp_high'
   end
 
+  def chance_of_keys
+    trip_hash['chance_of'].keys
+  end
+
   def chance_of(condition)
     WundergroundChanceData.new(trip_hash['chance_of'][condition])
   end
