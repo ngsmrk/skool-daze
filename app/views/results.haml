@@ -2,3 +2,20 @@
 
 .content
   %h2= @client_response.title
+
+  %table.table.table-hover.table-bordered
+    %tr
+      %th Temperature
+      %th Min
+      %th Max
+      %th Average
+    %tr
+      %td Low
+      %td= @client_response.temp_low.min_C
+      %td= @client_response.temp_low.max_C
+      %td= @client_response.temp_low.avg_C
+    %tr
+      %td High
+      %td= @client_response.temp_high.min_C
+      %td= @client_response.temp_high.max_C
+      %td= @client_response.temp_high.avg_C
