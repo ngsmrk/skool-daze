@@ -19,3 +19,15 @@
       %td= @client_response.temp_high.min_C
       %td= @client_response.temp_high.max_C
       %td= @client_response.temp_high.avg_C
+
+  %table.table.table-hover.table-bordered
+    %tr
+      %th Cloud Cover
+      %th Min rainfall in centimetres
+      %th Max rainfall in centimetres
+      %th Average rainfall in centimetres
+    %tr
+      %td= @client_response.cloud_cover
+      %td= @client_response.rain_levels.min_cm
+      %td= @client_response.rain_levels.max_cm
+      %td= @client_response.rain_levels.avg_cm

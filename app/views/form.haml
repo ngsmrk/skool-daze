@@ -4,9 +4,9 @@
   .panel-body
     %form.form-inline{:role => 'form', :method => 'POST'}
       .form-group
-        %input.form_control{:value => '0701', :type => 'text', :placeholder => 'Enter start date', :name => 'start_date'}
-        %input.form_control{:value => '0731', :type => 'text', :placeholder => 'Enter end date', :name => 'end_date'}
-        %input.form_control{:type => 'text', :placeholder => 'Enter country', :name => 'country'}
-        %input.form_control{:type => 'text', :placeholder => 'Enter town or city', :name => 'town_city'}
+        %input.form_control{:type => 'text', :placeholder => 'Start date e.g. 0701', :name => 'start_date'}
+        %input.form_control{:type => 'text', :placeholder => 'End date e.g. 0731', :name => 'end_date'}
+        %input.form_control{:type => 'text', :placeholder => 'Country e.g. France', :name => 'country'}
+        %input.form_control{:type => 'text', :placeholder => 'Town / city e.g. Paris', :name => 'town_city'}
         %button.btn.btn-default{:type => "submit"}
           Search        
