@@ -1,15 +1,4 @@
-.panel.panel-default
-  .panel-heading
-    Enter your details
-  .panel-body
-    %form.form-inline{:role => 'form', :method => 'POST'}
-      .form-group
-        %input.form_control{:value => '0701', :type => 'text', :placeholder => 'Enter start date', :name => 'start_date'}
-        %input.form_control{:value => '0731', :type => 'text', :placeholder => 'Enter end date', :name => 'end_date'}
-        %input.form_control{:value => 'France', :type => 'text', :placeholder => 'Enter country', :name => 'country'}
-        %input.form_control{:value => 'Paris', :type => 'text', :placeholder => 'Enter town or city', :name => 'town_city'}
-        %button.btn.btn-default{:type => "submit"}
-          Search
-          
+= haml :form
+
 .content
-  %h2= @title
+  %h2= @client_response.title
