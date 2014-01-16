@@ -31,3 +31,14 @@
       %td= @client_response.rain_levels.min_cm
       %td= @client_response.rain_levels.max_cm
       %td= @client_response.rain_levels.avg_cm
+
+  %table.table.table-hover.table-bordered
+    %tr
+      %th Chance of
+      %th Percentage
+    %tr
+      %td= @client_response.chance_of('tempoverfreezing').description
+      %td= @client_response.chance_of('tempoverfreezing').percentage
+    %tr
+      %td= @client_response.chance_of('tempoversixty').description
+      %td= @client_response.chance_of('tempoversixty').percentage
