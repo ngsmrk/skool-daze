@@ -1,11 +1,15 @@
 .panel.panel-default
   .panel-heading
-    %h2 Where are you going?
+    %h2 Want to know if the weather is decent?
   .panel-body
     %form.form-inline{:role => 'form', :method => 'POST'}
       .form-group
+        %label
+          When?
         %input.form_control{:type => 'text', :placeholder => 'Start date e.g. 0701', :name => 'start_date'}
         %input.form_control{:type => 'text', :placeholder => 'End date e.g. 0731', :name => 'end_date'}
+        %label
+          Where?
         %select.form_control{:name => 'country'}
           - @countries.each do | country |
             %option{:value => country[0], :id => country[1]}= country[0]
