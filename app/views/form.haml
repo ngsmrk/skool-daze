@@ -6,8 +6,8 @@
       .form-group
         %label
           When?
-        %input.form_control{:type => 'text', :placeholder => 'Start date e.g. 0701', :name => 'start_date'}
-        %input.form_control{:type => 'text', :placeholder => 'End date e.g. 0731', :name => 'end_date'}
+        %input.form_control{:type => 'text', :placeholder => 'Start date e.g. 0701', :id => 'start_date', :name => 'start_date'}
+        %input.form_control{:type => 'text', :placeholder => 'End date e.g. 0731', :id => 'end_date', :name => 'end_date'}
         %label
           Where?
         %select.form_control{:name => 'country'}
@@ -15,4 +15,4 @@
             %option{:value => country[0], :id => country[1]}= country[0]
         %input.form_control{:type => 'text', :placeholder => 'Town / city e.g. London', :name => 'town_city'}
         %button.btn.btn-default{:type => "submit"}
-          Search        
+          Search
