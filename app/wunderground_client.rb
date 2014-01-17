@@ -1,5 +1,6 @@
 require 'httparty'
 require 'rack/utils'
+require 'iso_country_codes'
 require_relative 'wunderground_response'
 
 class WundergroundClient
@@ -15,6 +16,10 @@ class WundergroundClient
   
   def planner(start_date, end_date, country, city)  
     get_data("planner_#{start_date}#{end_date}/q/#{Rack::Utils.escape_path(country)}/#{Rack::Utils.escape_path(city)}.json")
+  end
+
+  def country_list
+    IsoCountryCodes.for_select
   end
 
   private 
