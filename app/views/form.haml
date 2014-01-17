@@ -1,12 +1,14 @@
 .panel.panel-default
   .panel-heading
-    %h2 Enter your details
+    %h2 Where are you going?
   .panel-body
     %form.form-inline{:role => 'form', :method => 'POST'}
       .form-group
         %input.form_control{:type => 'text', :placeholder => 'Start date e.g. 0701', :name => 'start_date'}
         %input.form_control{:type => 'text', :placeholder => 'End date e.g. 0731', :name => 'end_date'}
-        %input.form_control{:type => 'text', :placeholder => 'Country e.g. France', :name => 'country'}
-        %input.form_control{:type => 'text', :placeholder => 'Town / city e.g. Paris', :name => 'town_city'}
+        %select.form_control{:name => 'country'}
+          - @countries.each do | country |
+            %option{:value => country[0], :id => country[1]}= country[0]
+        %input.form_control{:type => 'text', :placeholder => 'Town / city e.g. London', :name => 'town_city'}
         %button.btn.btn-default{:type => "submit"}
           Search        
