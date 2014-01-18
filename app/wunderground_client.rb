@@ -12,12 +12,6 @@ class WundergroundClient
     @base_url = base_url
     @api_key = api_key
   end
-  
-  def planner(start_date, end_date, country, city)  
-    get_data("planner_#{start_date}#{end_date}/q/#{Rack::Utils.escape_path(country)}/#{Rack::Utils.escape_path(city)}.json")
-  end
-
-  private 
 
   def get_data(url)
     full_url = "#{@base_url}/#{api_key}/#{url}"
