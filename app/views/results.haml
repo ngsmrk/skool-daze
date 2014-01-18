@@ -1,43 +1,45 @@
 = haml :form
 
-.content
-  %h2 
-    Results for
-    =@client_response.params[:city]    
-    =@client_response.params[:country]
-    between
-    =@client_response.params[:start_date]
-    and
-    =@client_response.params[:end_date]
+.panel.panel-default
+  .panel-heading
+    %h2 
+      Results for
+      =@client_response.params[:city]    
+      =@client_response.params[:country]
+      between
+      =@client_response.params[:start_date]
+      and
+      =@client_response.params[:end_date]
 
-  %table.table.table-hover.table-bordered
-    %tr
-      %th Temperature
-      %th Min
-      %th Max
-      %th Average
-    %tr
-      %td Low
-      %td= @client_response.temp_low.min_C
-      %td= @client_response.temp_low.max_C
-      %td= @client_response.temp_low.avg_C
-    %tr
-      %td High
-      %td= @client_response.temp_high.min_C
-      %td= @client_response.temp_high.max_C
-      %td= @client_response.temp_high.avg_C
+  .panel-body      
+    %table.table.table-hover.table-bordered
+      %tr
+        %th Temperature
+        %th Min
+        %th Max
+        %th Average
+      %tr
+        %td Low
+        %td= @client_response.temp_low.min_C
+        %td= @client_response.temp_low.max_C
+        %td= @client_response.temp_low.avg_C
+      %tr
+        %td High
+        %td= @client_response.temp_high.min_C
+        %td= @client_response.temp_high.max_C
+        %td= @client_response.temp_high.avg_C
 
-  %table.table.table-hover.table-bordered
-    %tr
-      %th Cloud Cover
-      %th Min rainfall in centimetres
-      %th Max rainfall in centimetres
-      %th Average rainfall in centimetres
-    %tr
-      %td= @client_response.cloud_cover
-      %td= @client_response.rain_levels.min_cm
-      %td= @client_response.rain_levels.max_cm
-      %td= @client_response.rain_levels.avg_cm
+    %table.table.table-hover.table-bordered
+      %tr
+        %th Cloud Cover
+        %th Min rainfall in centimetres
+        %th Max rainfall in centimetres
+        %th Average rainfall in centimetres
+      %tr
+        %td= @client_response.cloud_cover
+        %td= @client_response.rain_levels.min_cm
+        %td= @client_response.rain_levels.max_cm
+        %td= @client_response.rain_levels.avg_cm
 
     %table.table.table-hover.table-bordered
       %tr
