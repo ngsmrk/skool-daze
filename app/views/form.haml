@@ -20,3 +20,25 @@
       .form-group      
         %button.btn.btn-default{:type => "submit"}
           Search
+
+
+:javascript
+  $( document ).ready(function() {
+    $( "#start_date" ).datepicker({
+      showOn: "button",
+      buttonImage: "images/calendar.gif",
+      buttonImageOnly: true,
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true      
+    });
+
+    $( "#end_date" ).datepicker({
+      showOn: "button",
+      buttonImage: "images/calendar.gif",
+      buttonImageOnly: true,
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true      
+    });    
+  });
