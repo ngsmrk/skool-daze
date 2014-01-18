@@ -1,19 +1,15 @@
 = haml :form
 
 .content
-  %h2 Results
-  %table.table.table-hover.table-bordered
-    %tr
-      %th Start Date
-      %th End Date
-      %th Country
-      %th Town / City
-    %tr
-      %td= @client_response.params[:start_date]
-      %td= @client_response.params[:end_date]
-      %td= @client_response.params[:country]
-      %td= @client_response.params[:city] 
-  
+  %h2 
+    Results for
+    =@client_response.params[:city]    
+    =@client_response.params[:country]
+    between
+    =@client_response.params[:start_date]
+    and
+    =@client_response.params[:end_date]
+
   %table.table.table-hover.table-bordered
     %tr
       %th Temperature
