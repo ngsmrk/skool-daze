@@ -18,5 +18,5 @@ post '/' do
 end
 
 def countries
-  IsoCountryCodes.for_select
+  IsoCountryCodes.for_select.sort
 end
