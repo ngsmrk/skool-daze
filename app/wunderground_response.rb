@@ -2,6 +2,9 @@ require_relative 'wunderground_chance_data'
 require_relative 'wunderground_range'
 
 class WundergroundResponse
+
+  attr_accessor :params
+
   def initialize(hash)
     @hash = hash
   end

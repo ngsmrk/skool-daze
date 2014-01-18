@@ -7,7 +7,13 @@ class HolidayPlannerClient < WundergroundClient
   end  
   
   def planner(start_date, end_date, country, city)  
-    get_data("planner_#{start_date}#{end_date}/q/#{Rack::Utils.escape_path(country)}/#{Rack::Utils.escape_path(city)}.json")
+    response = get_data("planner_#{start_date}#{end_date}/q/#{Rack::Utils.escape_path(country)}/#{Rack::Utils.escape_path(city)}.json")
+
+    params = {start_date: start_date, end_date: end_date, country: country, city: city}
+
+    response.params = params
+
+    response  
   end
   
 end
