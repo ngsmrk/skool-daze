@@ -15,7 +15,7 @@
   .panel-body      
     %table.table.table-hover.table-bordered
       %tr
-        %th Temperature
+        %th Temperature (°C)
         %th Min
         %th Max
         %th Average
@@ -33,9 +33,9 @@
     %table.table.table-hover.table-bordered
       %tr
         %th Cloud cover
-        %th Min rainfall in centimetres
-        %th Max rainfall in centimetres
-        %th Average rainfall in centimetres
+        %th Min rainfall (cm)
+        %th Max rainfall (cm)
+        %th Average rainfall (cm)
       %tr
         %td= @client_response.cloud_cover
         %td= @client_response.rain_levels.min_cm
