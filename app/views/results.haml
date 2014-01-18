@@ -2,13 +2,14 @@
 
 .panel.panel-default
   .panel-heading
-    %h2 
+    %label
       Results for
-      =@client_response.params[:city]    
+      =@client_response.params[:city]
+      in
       =@client_response.params[:country]
-      between
+      from
       =@client_response.params[:start_date]
-      and
+      to
       =@client_response.params[:end_date]
 
   .panel-body      
@@ -31,7 +32,7 @@
 
     %table.table.table-hover.table-bordered
       %tr
-        %th Cloud Cover
+        %th Cloud cover
         %th Min rainfall in centimetres
         %th Max rainfall in centimetres
         %th Average rainfall in centimetres
