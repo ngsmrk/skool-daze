@@ -20,7 +20,7 @@
           %label in:
           %select.form_control{:name => 'country'}
             - @countries.each do | country |
-              %option{:value => country[0], :id => country[1]}= country[0]
+              %option{:value => country[0], :id => country[1], :selected => country[0] == @params[:country]}= country[0]
       .form-group      
         %button.btn.btn-default{:type => "submit"}
           Search
