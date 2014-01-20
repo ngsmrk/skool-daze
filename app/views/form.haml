@@ -8,15 +8,15 @@
           When?
         %div
           %label From:
-          %input.form_control{:type => 'text', :placeholder => 'Start date', :id => 'start_date', :name => 'start_date'}
+          %input.form_control{:type => 'text', :value => @params[:start_date], :id => 'start_date', :name => 'start_date'}
           %label to:
-          %input.form_control{:type => 'text', :placeholder => 'End date', :id => 'end_date', :name => 'end_date'}
+          %input.form_control{:type => 'text', :value => @params[:start_date], :id => 'end_date', :name => 'end_date'}
       .form-group
         %label.control-label{:for => 'country'}
           Where? 
         %div
           %label City:
-          %input.form_control{:type => 'text', :placeholder => 'Town / city', :name => 'town_city'}
+          %input.form_control{:type => 'text', :value => @params[:town_city], :name => 'town_city'}
           %label in:
           %select.form_control{:name => 'country'}
             - @countries.each do | country |

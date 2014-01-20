@@ -4,9 +4,9 @@
   .panel-heading
     %label
       Results for
-      =@client_response.params[:city]
+      =@client_response.params[:city].titleize
       in
-      =@client_response.params[:country]
+      =@client_response.params[:country].titleize
       from
       =@client_response.params[:start_date]
       to

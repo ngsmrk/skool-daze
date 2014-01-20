@@ -1,10 +1,12 @@
 require 'sinatra'
 require 'haml'
+require 'titleize'
 require 'iso_country_codes'
 
 require_relative 'holiday_planner_client'
 
 get '/' do
+  @params = {}
   @countries = countries
   haml :index
 end
