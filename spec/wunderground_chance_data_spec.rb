@@ -19,7 +19,7 @@ describe WundergroundChanceData do
     end
     
     it 'raises an error if the method does not match a key in the hash' do
-      expect { @data.non_existent_method}.should raise_error(RuntimeError)
+      expect { @data.non_existent_method}.to raise_error(RuntimeError)
     end
 
   end
